@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Subway Dash — Endless Runner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrapper">
+
+    <div id="hud">
+      <div class="hud-item">
+        <span class="hud-label">SCORE</span>
+        <span id="score">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">🪙</span>
+        <span id="coins">0</span>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">BEST</span>
+        <span id="best">0</span>
+      </div>
+    </div>
+
+    <canvas id="game" width="400" height="700"></canvas>
+
+    <!-- Start screen -->
+    <div id="start-screen" class="overlay">
+      <h1>SUBWAY <span>DASH</span></h1>
+      <p>Dodge the trains. Grab the coins. Don't stop running.</p>
+      <button id="start-btn" class="btn">▶ PLAY</button>
+      <div class="controls-hint">
+        <div><b>← →</b> or <b>A D</b> — switch lane</div>
+        <div><b>↑</b> or <b>W / Space</b> — jump</div>
+        <div><b>↓</b> or <b>S</b> — slide</div>
+      </div>
+    </div>
+
+    <!-- Game over screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <h1 class="gameover-title">CRASHED!</h1>
+      <p id="final-score-text">Score: 0</p>
+      <p id="new-best-text" class="hidden">🎉 New Best!</p>
+      <button id="restart-btn" class="btn">↻ RUN AGAIN</button>
+    </div>
+
+    <!-- Mobile touch controls -->
+    <div id="touch-controls">
+      <button id="btn-left" class="touch-btn">◀</button>
+      <button id="btn-jump" class="touch-btn">▲</button>
+      <button id="btn-slide" class="touch-btn">▼</button>
+      <button id="btn-right" class="touch-btn">▶</button>
+    </div>
+
+  </div>
+
+<script src="game.js"></script>
+</body>
+</html>
